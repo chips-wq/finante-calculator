@@ -49,7 +49,7 @@ class Credit:
             "Rata lunară": round(self.monthly_payment, 2),
             "Plata principalului": round(principal_payment, 2),
             "Plata dobânzii": round(interest_payment, 2),
-            "Sold rămas": round(remaining_balance, 2)
+            "Soldul creditului": round(remaining_balance, 2)
         })
 
     # Crearea unui DataFrame pentru scadentar
@@ -93,15 +93,17 @@ class Credit:
 # months = int(input())  # durata creditului
 
 if __name__ == "__main__":
-  # credit_casa = Credit(13752.95, 96, monthly_interest_rate=11.083/12/100)
+  credit_casa = Credit(13752.95, 96, monthly_interest_rate=11.083/12/100)
   # # # credit_casa = Credit(14930 110, APR=10.578)
 
-  # print(credit_casa)
+  print(credit_casa)
 
   # print()
   # print()
   # print()
-  credit_refinantare = Credit(68410, 60, APR=9.03)
+  # credit_refinantare = Credit(68410, 60, APR=9.03)
+  # print(credit_refinantare)
+  credit_refinantare = Credit(69000, 60, monthly_interest_rate=7.5/12/100);
   print(credit_refinantare)
   # credit_casa_2 = Credit(principal, months, monthly_interest_rate=11.00 / 12 / 100)
 
