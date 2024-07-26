@@ -93,20 +93,5 @@ class Credit:
 # months = int(input())  # durata creditului
 
 if __name__ == "__main__":
-  credit_casa = Credit(13752.95, 96, monthly_interest_rate=11.083/12/100)
-  # # # credit_casa = Credit(14930 110, APR=10.578)
-
-  print(credit_casa)
-
-  # print()
-  # print()
-  # print()
-  # credit_refinantare = Credit(68410, 60, APR=9.03)
-  # print(credit_refinantare)
-  credit_refinantare = Credit(69000, 60, monthly_interest_rate=7.5/12/100);
-  print(credit_refinantare)
-  # credit_casa_2 = Credit(principal, months, monthly_interest_rate=11.00 / 12 / 100)
-
-  # print(credit_casa_2)
-  # credit_random = Credit(10000, 12, APR=11.08)
-  # print(credit_random);
+  credit_random = Credit(10000, 10, monthly_interest_rate=6.75/12/100)
+  print(credit_random);
