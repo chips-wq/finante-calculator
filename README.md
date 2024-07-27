@@ -110,10 +110,7 @@ Pentru simplitate, ne putem imagina alt credit, in momentul cand platim, acesta 
 Anuitatea lunara ramane la fel, deci ajungem la ecuatia:
 
 $$
-
 A(P-q, R, n_2) = A(P, R, n)
-
-
 $$
 
 Se observa ca daca $q \gt 0$, trebuie sa avem $n_2 \lt n$: perioada pe care platim **se reduce** (deci nu vom mai plati dobanda in acele luni).
@@ -178,6 +175,3 @@ In total ai salvat ca dobanda 119.52
 _Simulatorul si indicatiile sunt doar pentru credite cu dobanda fixa, insa cititorul poate deriva formule in cazul in care dobanda se schimba._
 
 _Indicatie: din sirul $P_i$, vom calcula dobanda respectiva acelei luni: $R_i * P_i$ = dobanda in aceasta luna (rata lunara se schimba si ea)_
-
-$$
-$$
