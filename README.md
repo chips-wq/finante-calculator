@@ -126,6 +126,7 @@ Vom lua exemplul original, incepand cu `luna2`, vom pretinde ca e un credit nou 
 3. numarul_de_luni = `8`
 
 ```bash
+$ python3 rambursare_anticipata.py
 [4.9745078] # valoarea exacta a lui n2
 Principalul: 8044.62
 Numarul de luni: 8
