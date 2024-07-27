@@ -26,16 +26,21 @@ def rambursare_anticipata_scade_perioada(principal, mothly_interest_rate, number
 
   return n2
 
-credit_principal = 13753.5
-rata = 11.083
-numar_luni = 96
+# Creditul nostru echivalent, insa pornind din luna2
+# A(8044.62, 6.75 / 12 / 100, 8) = A(10000, 6.75 / 12 / 100, 10), conform observatiei de la rambursare anticipata
+credit_principal = 8044.62
+rata = 6.75
+numar_luni = 8
 
-rambursat = 2692 # euro 
+# Cati bani rambursam in acest moment
+rambursat = 3000
 
+# Noul numar de luni
 new_num_of_months = rambursare_anticipata_scade_perioada(credit_principal, rata / 12 / 100, numar_luni, rambursat)
 
 from calcul_anuitate import Credit
 
+# Generam si creditul_dupa_rambursare, scazand direct din principal (soldul creditului)
 credit_original = Credit(credit_principal, numar_luni, monthly_interest_rate=rata/12/100)
 credit_dupa_rambursare = Credit(credit_principal-rambursat, new_num_of_months, monthly_interest_rate=rata/12/100)
 

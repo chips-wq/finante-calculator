@@ -3,7 +3,7 @@ class Depozit():
   Calculatorul isi asuma cateva lucruri:
 
   1. Dobanda va fi platita anual astfel suma_depozit += suma_depozit * dobanda_an_procente
-  (se observa ca dobanda e adaugata automat inapoi in depozit, astfel avem *compund interest*)
+  (se observa ca dobanda e adaugata automat inapoi in depozit, astfel avem *compound interest*)
 
   2. Va fi platit un depozit pe venit la data scadentei (la final) de 10% din suma dobandei castigate.
   """
@@ -34,6 +34,6 @@ dobanda_an_procente = float(input())
 print("Numarul de ani: ")
 numar_ani = int(input())
 
-depozit_cec = Depozit(suma_initiala, dobanda_an_procente, numar_ani)
-depozit_cec.simulate()
+depozit = Depozit(suma_initiala, dobanda_an_procente, numar_ani)
+depozit.simulate()
 
