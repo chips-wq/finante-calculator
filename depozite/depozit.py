@@ -24,16 +24,16 @@ class Depozit():
 
 
 
+if __name__ == '__main__':
+  print("Suma initiala: ")
+  suma_initiala = float(input())
 
-print("Suma initiala: ")
-suma_initiala = float(input())
+  print("Dobanda an procente: ")
+  dobanda_an_procente = float(input())
 
-print("Dobanda an procente: ")
-dobanda_an_procente = float(input())
+  print("Numarul de ani: ")
+  numar_ani = int(input())
 
-print("Numarul de ani: ")
-numar_ani = int(input())
-
-depozit = Depozit(suma_initiala, dobanda_an_procente, numar_ani)
-depozit.simulate()
+  depozit = Depozit(suma_initiala, dobanda_an_procente, numar_ani)
+  depozit.simulate()
 

@@ -25,7 +25,7 @@ class Credit:
 
     # Calculul ratei lunare folosind formula (se mai numeste anuitate)
     self.monthly_payment = self.principal * (self.monthly_interest_rate * (1 + self.monthly_interest_rate) ** self.number_of_payments) / ((1 + self.monthly_interest_rate) ** self.number_of_payments - 1)
-    # A(p, r, n) => anuitatea(monthly_payment) e o functie care depinde de 
+    # A(p, r, n) => anuitatea (monthly_payment) e o functie care depinde de 
     # `principal`, `rata la fiecare plata` si `numarul de plati`
 
     # Calculeaza scadentarul pentru acest credit
@@ -84,14 +84,18 @@ class Credit:
 
     return res
     
-# Datele de intrare
-# print("Introdu principalul: ")
-# principal = float(input())  # valoarea creditului
-# print("Introdu Dobanda Anuala (nu efectiva) in procente: ")
-# annual_interest_rate = float(input())  # rata dobanzii
-# print("Introdu durata creditului in luni:")
-# months = int(input())  # durata creditului
+def read_credit_from_stdin():
+  print("Introdu principalul: ")
+  principal = float(input())  # valoarea creditului
+  print("Introdu Dobanda Anuala (nu efectiva) in procente: ")
+  annual_interest_rate = float(input())  # rata dobanzii
+  print("Introdu durata creditului in luni:")
+  months = int(input())  # durata creditului
+
+  return principal, annual_interest_rate, months
 
 if __name__ == "__main__":
-  credit_random = Credit(10000, 10, monthly_interest_rate=6.75/12/100)
+  principal, annual_interest_rate, months = read_credit_from_stdin()
+
+  credit_random = Credit(principal, months, monthly_interest_rate=annual_interest_rate/12/100)
   print(credit_random);
